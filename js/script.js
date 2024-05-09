@@ -94,3 +94,36 @@ function verificaCampo(campo) {
 }
 
 // console.log(camposDoFormulario);
+
+// SOBRE O CODIGO
+
+// Importação de funções:
+// O código importa as funções "ehUmCPF() e ehMaiorDeIdade()" de seus respectivos arquivos.
+
+// Seleção de elementos do DOM:
+// O código seleciona todos os campos do formulário que possuem o atributo "required".
+// Também seleciona o próprio formulário.
+
+// Evento de envio do formulário:
+// Quando o formulário é enviado, o evento "submit" é disparado.
+// O código previne o comportamento padrão do formulário (recarregar a página) usando "e.preventDefault()".
+// Em seguida, ele cria um objeto "listaRespostas" com os valores dos campos do formulário.
+// Esse objeto é armazenado no "localStorage" e, em seguida, o usuário é redirecionado para a página "abrir-conta-form-2.html".
+
+// Adição de "event" listeners nos campos:
+// Para cada campo do formulário, o código adiciona dois event listeners:
+// "blur": dispara a função "verificaCampo()" quando o campo perde o foco.
+// "invalid": previne o comportamento padrão do campo inválido.
+
+// Definição de tipos de erro e mensagens:
+// O código define um array "tiposDeErro" com os possíveis tipos de erro que podem ocorrer nos campos.
+// Também define um objeto "mensagens" com as mensagens de erro personalizadas para cada campo e tipo de erro.
+
+// Função "verificaCampo():
+// Essa função é responsável por validar os campos do formulário.
+// Ela primeiro limpa a mensagem de erro personalizada do campo.
+// Em seguida, verifica se o campo é um CPF ou uma data de nascimento, chamando as funções "ehUmCPF() e ehMaiorDeIdade()" respectivamente.
+// Depois, ela percorre o array "tiposDeErro" e verifica se algum deles é válido para o campo atual. Caso seja, ela define a mensagem de erro correspondente.
+// Por fim, ela seleciona o elemento ".mensagem-erro" dentro do campo e atualiza seu conteúdo com a mensagem de erro, caso o campo seja inválido.
+
+// O código parece estar bem estruturado e implementando as validações de forma correta. Ele utiliza as funções "ehUmCPF() e ehMaiorDeIdade()" para validar o CPF e a idade do usuário, respectivamente. Além disso, ele exibe mensagens de erro personalizadas para cada campo, o que melhora a experiência do usuário.

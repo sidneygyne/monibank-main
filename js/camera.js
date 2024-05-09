@@ -35,3 +35,34 @@ botaoEnviarFoto.addEventListener("click", () => {
 
     window.location.href= "./abrir-conta-form-3.html";
 })
+
+
+// MAIS SOBRE O CODIGO
+
+// O código começa declarando algumas variáveis:
+// botaoIniciarCamera: referência ao botão que inicia a câmera.
+// campoCamera: referência ao elemento HTML que exibe a câmera.
+// video: referência ao elemento de vídeo.
+// botaoTirarFoto: referência ao botão que tira a foto.
+// canvas: referência ao elemento canvas onde a foto será exibida.
+// mensagem: referência a um elemento HTML que exibe uma mensagem.
+// imagemURL: variável que armazena a URL da foto tirada.
+// botaoEnviarFoto: referência ao botão que envia a foto.
+
+// O código adiciona um evento de clique ao "botaoIniciarCamera":
+// Ao clicar nesse botão, o código usa "navigator.mediaDevices.getUserMedia()" para acessar a câmera do dispositivo.
+// Após obter acesso à câmera, o código oculta o "botaoIniciarCamera" e exibe o "campoCamera".
+// O vídeo da câmera é então exibido no elemento "video".
+
+// O código adiciona um evento de clique ao "botaoTirarFoto":
+// Ao clicar nesse botão, o código usa o método "drawImage()" do contexto 2D do "canvas" para capturar a imagem do vídeo.
+// A URL da imagem capturada é então armazenada na variável "imagemURL".
+// O campoCamera é ocultado e a mensagem é exibida.
+
+// O código adiciona um evento de clique ao "botaoEnviarFoto":
+// Ao clicar nesse botão, o código obtém os dados existentes no localStorage, usando "localStorage.getItem("cadastro")", e os converte de volta para um objeto usando "JSON.parse()".
+// O código então adiciona a propriedade "imagem" ao objeto "converteRetorno", atribuindo a ela a "imagemURL".
+// Os dados atualizados são então salvos no localStorage, usando "localStorage.setItem('cadastro', JSON.stringify(converteRetorno))".
+// Por fim, o usuário é redirecionado para a página "abrir-conta-form-3.html" usando "window.location.href".
+
+// Essa sequência de ações permite que o usuário tire uma foto usando a câmera do dispositivo e, em seguida, envie essa foto junto com os dados do formulário já salvos no localStorage.
